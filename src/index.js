@@ -8,6 +8,8 @@ if (dontEnvResult.error) {
 }
 
 const express = require('express');
+const Image = require('src/api/v1/models/Image');
+const Timelapse = require('src/api/v1/models/Timelapse');
 
 const app = express();
 
@@ -34,15 +36,10 @@ sequelize.authenticate()
         process.exit(1);
     });
 
-    const Image = require('src/api/v1/models/Image');
-const Timelapse = require('src/api/v1/models/Timelapse');
-
-    const initModels = async () => {
-
-        await Image.sync((err) => console.error(err));
-        await Timelapse.sync((err) => console.error(err));
-    
-    };
+const initModels = async () => {
+    await Image.sync((err) => console.error(err));
+    await Timelapse.sync((err) => console.error(err));    
+};
 
 
-    initModels();
+initModels();
