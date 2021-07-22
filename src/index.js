@@ -32,7 +32,7 @@ sequelize.authenticate()
         console.log(`TimeLapseMe resource server listening on port ${process.env.PORT}`);
     })
     .catch((err) => {
-        console.error(`Unable to connect to MySQL database ${process.env.MYSQL_HOST}:${MYSQL_PORT}`, error);
+        console.error(`Unable to connect to MySQL database ${process.env.MYSQL_HOST}:${process.env.MYSQL_PORT}`, err);
         process.exit(1);
     });
 
