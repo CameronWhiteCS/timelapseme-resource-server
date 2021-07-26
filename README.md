@@ -1,30 +1,40 @@
 # TimeLapseMe Resource Server
 
-Stores user-uploaded images and processes them into video on-demand.
+TimeLapseMe is an iOS application that allows users to take daily photos and transform them into time lapses.
 
-# API
+<img src="https://i.imgur.com/A2todfd.png">
+
+# API Documentation
 
 ## Misc. Details
 
 - All errors are plain text
-- All dates and times are recorded using Greenwich Mean Time
+- All dates and times are recorded using GMT
 
 ## Environment Variables (.env)
 
 PORT
 
 MYSQL_USER
+
 MYSQL_PASSWORD
+
 MYSQL_HOST
+
 MYSQL_PORT
+
 MYSQL_DATABASE
 
-JWT_PUBLIC_KEY_PATH
+JWT_PUBLIC_KEY_PATH - Path of public key used to verify JWTs issued by the TimeLapseMe authentication server
+
 JWT_ISSUER - Expected issuer of auth JWT's
+
 JWT_AUDIENCE - Expected audience of auth JWT's
 
-UPLOAD_DIRECTORY
-TIMELAPSE_DIRECTORY
+UPLOAD_DIRECTORY - Path where uploaded files are stored
+
+TIMELAPSE_DIRECTORY - Path where video files will be stored
+
 MAX_UPLOAD_SIZE - Size in bytes
 
 ## API Tree
